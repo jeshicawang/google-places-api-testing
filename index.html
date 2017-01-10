@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Google Place API Testing</title>
-	  <link rel="stylesheet" href="styles.css">
+	  <link rel="stylesheet" href="default.css">
   </head>
   <body>
-    <h1>Google Place API Testing</h1>
-	  <script src="main.js"></script>
+    <script src="main.js"></script>
+    <h1>Google Places API Testing</h1>
+    <p>Autocomplete example: Will console.log the selected city</p>
+    <input id="autocomplete" placeholder="Where do you want to go?" onfocus="geolocate()" type="text">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdRineV_I6ibxurvPguJaPar5fr8OlNW4&libraries=places&callback=initAutocomplete" async defer></script>
   </body>
 </html>
