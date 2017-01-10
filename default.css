@@ -1,3 +1,10 @@
 #autocomplete {
   width: 300px;
 }
+
+#place-photo {
+  width: 800px;
+  height: 400px;
+  background-color: #eee;
+  background-size: cover;
+}

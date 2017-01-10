@@ -5,12 +5,16 @@ function initAutocomplete() {
     /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
             {types: ['(cities)']}
   );
-  autocomplete.addListener('place_changed', sendAlert)
+  autocomplete.addListener('place_changed', displayPlacePhoto)
 }
 
-function sendAlert() {
+function displayPlacePhoto() {
   const place = autocomplete.getPlace();
   console.log(place);
+  console.log(place.photos.length);
+  var photoUrl = place.photos[0].getUrl({'maxWidth': 1600});
+  console.log(photoUrl);
+  document.getElementById('place-photo').style.backgroundImage = 'url(' + photoUrl + ')';
 }
 
 function geolocate() {
